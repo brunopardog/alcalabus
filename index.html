@@ -114,8 +114,6 @@
     };
 
     var lines = {};
-    var newChecked = true;
-    var currentChecked = false;
 
     var theMap = L.map("map").setView([40.488, -3.36], 14);
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -147,12 +145,14 @@
       });
     });
 
-    function foldClicked() {
+    function foldClicked(e) {
+      e.preventDefault();
       document.querySelector(".unfolded").style.display = "none";
       document.querySelector(".folded").style.display = "block";
     }
 
-    function unfoldClicked() {
+    function unfoldClicked(e) {
+      e.preventDefault();
       document.querySelector(".unfolded").style.display = "block";
       document.querySelector(".folded").style.display = "none";
     }
@@ -179,11 +179,10 @@
     }
 
     function newClicked(e) {
-      newChecked = !newChecked;
       Object.keys(lines).forEach(function (name) {
         if (name[0] === "n") {
           var chkbox = document.querySelector("input[value='" + name + "']");
-          if (newChecked) {
+          if (e.target.checked) {
             chkbox.checked = true;
             showLine(name);
           } else {
@@ -195,11 +194,10 @@
     }
 
     function currentClicked(e) {
-      currentChecked = !currentChecked;
       Object.keys(lines).forEach(function (name) {
         if (name[0] === "a") {
           var chkbox = document.querySelector("input[value='" + name + "']");
-          if (currentChecked) {
+          if (e.target.checked) {
             chkbox.checked = true;
             showLine(name);
           } else {
