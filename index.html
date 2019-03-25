@@ -120,7 +120,7 @@
       attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
     }).addTo(theMap);
 
-    var buses = omnivore.kml("autobuses-alcala.kml").addTo(theMap)
+    var buses = omnivore.kmz("Líneas.kmz").addTo(theMap)
     .on("ready", function() {
       var i = 0;
       buses.eachLayer(function (layer) {
@@ -263,62 +263,6 @@
         <li>
           <input type="checkbox" id="lineaC" name="lineaC" value="n-CIRCULAR" checked onClick="lineClicked(event)">
           <label for="lineaC">CIRCULAR</label>
-        </li>
-      </ul>
-
-      <p><strong>LÍNEAS ACTUALES:</strong></p>
-      <ul>
-        <li>
-          <input type="checkbox" id="current" name="current" value="0" onClick="currentClicked(event)">
-          <label for="current" class="current">(todas)</label>
-        </li>
-        <li>
-          <input type="checkbox" id="linea1" name="linea1" value="a-1" onClick="lineClicked(event)">
-          <label for="linea1">Línea 1</label>
-        </li>
-        <li>
-          <input type="checkbox" id="linea2" name="linea2" value="a-2" onClick="lineClicked(event)">
-          <label for="linea2">Línea 2</label>
-        </li>
-        <li>
-          <input type="checkbox" id="linea3" name="linea3" value="a-3" onClick="lineClicked(event)">
-          <label for="linea3">Línea 3</label>
-        </li>
-        <li>
-          <input type="checkbox" id="linea4" name="linea4" value="a-4" onClick="lineClicked(event)">
-          <label for="linea4">Línea 4</label>
-        </li>
-        <li>
-          <input type="checkbox" id="linea5" name="linea5" value="a-5" onClick="lineClicked(event)">
-          <label for="linea5">Línea 5</label>
-        </li>
-        <li>
-          <input type="checkbox" id="linea6" name="linea6" value="a-6" onClick="lineClicked(event)">
-          <label for="linea6">Línea 6</label>
-        </li>
-        <li>
-          <input type="checkbox" id="linea7" name="linea7" value="a-7" onClick="lineClicked(event)">
-          <label for="linea7">Línea 7</label>
-        </li>
-        <li>
-          <input type="checkbox" id="linea8" name="linea8" value="a-8" onClick="lineClicked(event)">
-          <label for="linea8">Línea 8</label>
-        </li>
-        <li>
-          <input type="checkbox" id="linea9" name="linea9" value="a-9" onClick="lineClicked(event)">
-          <label for="linea9">Línea 9</label>
-        </li>
-        <li>
-          <input type="checkbox" id="linea10" name="linea10" value="a-10" onClick="lineClicked(event)">
-          <label for="linea10">Línea 10</label>
-        </li>
-        <li>
-          <input type="checkbox" id="linea11" name="linea11" value="a-11" onClick="lineClicked(event)">
-          <label for="linea11">Línea 11</label>
-        </li>
-        <li>
-          <input type="checkbox" id="linea12" name="linea12" value="a-12" onClick="lineClicked(event)">
-          <label for="linea12">Línea 12</label>
         </li>
       </ul>
 
